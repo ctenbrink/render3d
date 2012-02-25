@@ -1,0 +1,19 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+PROJECT(render3d)
+FIND_PACKAGE(Qt4 REQUIRED)
+
+SET(render3d_SOURCES main.cpp
+   )
+        
+#SET(render3d_HEADERS hellowindow.h)
+
+#QT4_WRAP_CPP(render3d_HEADERS_MOC ${render3d_HEADERS})
+
+INCLUDE(${QT_USE_FILE})
+ADD_DEFINITIONS(${QT_DEFINITIONS})
+
+ADD_EXECUTABLE(render3d ${render3d_SOURCES}
+              )
+
+TARGET_LINK_LIBRARIES(render3d ${QT_LIBRARIES})
