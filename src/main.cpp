@@ -1,10 +1,11 @@
 #include <QApplication>
-#include <QTextEdit>
+
+#include "MainWindow.h"
 
 int main(int argv, char *args[])
 {
     QApplication app(argv, args);
-    QTextEdit textEdit;
-    textEdit.show();
+    MainWindow main_window;
+    main_window.showMaximized();
     return app.exec();
 }
